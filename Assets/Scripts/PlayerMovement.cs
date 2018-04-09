@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		playerAnimator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -20,5 +20,13 @@ public class PlayerMovement : MonoBehaviour {
 		moveVertical = Input.GetAxisRaw("Vertical");
 
 		movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+	}
+
+	void FixedUpdate () {
+		if (movement != Vector3.zero) {
+			playerAnimator.SetFloat("Speed", 3f);
+		} else {
+			playerAnimator.SetFloat("Speed", 0f);
+		}
 	}
 }
