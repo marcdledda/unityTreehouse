@@ -11,11 +11,13 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		// Gather the Animator component from the Player GameObject
 		playerAnimator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		// Gather input from the keyboard
 		moveHorizontal = Input.GetAxisRaw("Horizontal");
 		moveVertical = Input.GetAxisRaw("Vertical");
 
@@ -23,10 +25,14 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
+		// If the player's movement Vector does not equal to 0...
 		if (movement != Vector3.zero) {
+			//...then plat the jump animation
 			playerAnimator.SetFloat("Speed", 3f);
 		} else {
+			// Otherwise, don't play the animation
 			playerAnimator.SetFloat("Speed", 0f);
 		}
+
 	}
 }
