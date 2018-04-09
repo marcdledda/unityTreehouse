@@ -171,6 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd9023afe3ca3a44ba15bef7c5a55e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1503294085 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 418044, guid: cc266edb02e56f64e91ad99f1d3197ce, type: 2}
+  m_PrefabInternal: {fileID: 1382256643}
 --- !u!1 &1875936792
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +187,7 @@ GameObject:
   - component: {fileID: 1875936794}
   - component: {fileID: 1875936793}
   - component: {fileID: 1875936797}
+  - component: {fileID: 1875936798}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -265,6 +270,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: eddd794900f055144b932e6b3389e35c, type: 2}
+--- !u!114 &1875936798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1875936792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe4e997ad5bdf94fb91918401230d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1503294085}
+  offset: {x: 0, y: 15, z: -5}
 --- !u!1001 &2054511071
 Prefab:
   m_ObjectHideFlags: 0
