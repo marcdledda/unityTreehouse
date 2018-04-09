@@ -114,6 +114,83 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &813148384
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 490482, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 490482, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.816
+      objectReference: {fileID: 0}
+    - target: {fileID: 490482, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490482, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490482, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490482, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490482, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 490482, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &887105726 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 194920, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
+  m_PrefabInternal: {fileID: 813148384}
+--- !u!114 &887105727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 887105726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce381207c95dcb4992fdc8c7dfa4723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &887105729 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 490482, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
+  m_PrefabInternal: {fileID: 813148384}
+--- !u!1 &1086559900 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 114304, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
+  m_PrefabInternal: {fileID: 813148384}
+--- !u!114 &1086559902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1086559900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c47e4fdc1d24ad43bc5570430fefc9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  center: {fileID: 887105729}
 --- !u!1001 &1382256643
 Prefab:
   m_ObjectHideFlags: 0
@@ -171,6 +248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd9023afe3ca3a44ba15bef7c5a55e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1503294085 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 418044, guid: cc266edb02e56f64e91ad99f1d3197ce, type: 2}
+  m_PrefabInternal: {fileID: 1382256643}
 --- !u!1 &1875936792
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +264,7 @@ GameObject:
   - component: {fileID: 1875936794}
   - component: {fileID: 1875936793}
   - component: {fileID: 1875936797}
+  - component: {fileID: 1875936798}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -265,6 +347,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: eddd794900f055144b932e6b3389e35c, type: 2}
+--- !u!114 &1875936798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1875936792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe4e997ad5bdf94fb91918401230d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1503294085}
+  offset: {x: 0, y: 15, z: -5}
 --- !u!1001 &2054511071
 Prefab:
   m_ObjectHideFlags: 0

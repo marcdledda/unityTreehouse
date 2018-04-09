@@ -8,11 +8,14 @@ public class PlayerMovement : MonoBehaviour {
 	private float moveHorizontal;
 	private float moveVertical;
 	private Vector3 movement;
+	private float turningSpeed = 20f;
+	private Rigidbody playerRigidbody;
 
 	// Use this for initialization
 	void Start () {
-		// Gather the Animator component from the Player GameObject
+		// Gather components from the Player Game Object
 		playerAnimator = GetComponent<Animator>();
+		playerRigidbody = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -27,7 +30,13 @@ public class PlayerMovement : MonoBehaviour {
 	void FixedUpdate () {
 		// If the player's movement Vector does not equal to 0...
 		if (movement != Vector3.zero) {
-			//...then plat the jump animation
+			//...then create a target rotation based on the movement vector...
+			Quaternion targetRotation = Quaternion.LookRotation(movement, Vector3.up);
+			//...and create another rotation that moves from the current rotation to the target rotation...
+			Quaternion newRotation = Quaternion.Lerp(playerRigidbody.rotation, targetRotation, turningSpeed*Time.deltaTime);
+			//...and change the player's rotation that moves from the current rotation to the target rotation...
+			playerRigidbody.MoveRotation(newRotation);
+			//...then play the jump animation
 			playerAnimator.SetFloat("Speed", 3f);
 		} else {
 			// Otherwise, don't play the animation
