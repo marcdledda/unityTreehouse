@@ -32,6 +32,10 @@ public class PlayerMovement : MonoBehaviour {
 		if (movement != Vector3.zero) {
 			//...then create a target rotation based on the movement vector...
 			Quaternion targetRotation = Quaternion.LookRotation(movement, Vector3.up);
+			//...and create another rotation that moves from the current rotation to the target rotation...
+			Quaternion newRotation = Quaternion.Lerp(playerRigidbody.rotation, targetRotation, turningSpeed*Time.deltaTime);
+			//...and change the player's rotation that moves from the current rotation to the target rotation...
+			playerRigidbody.MoveRotation(newRotation);
 			//...then play the jump animation
 			playerAnimator.SetFloat("Speed", 3f);
 		} else {
