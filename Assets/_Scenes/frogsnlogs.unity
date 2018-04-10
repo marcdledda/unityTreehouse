@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce381207c95dcb4992fdc8c7dfa4723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupPrefab: {fileID: 195284, guid: 788be48bf54627d42a4446d66cc6683b, type: 2}
 --- !u!4 &887105729 stripped
 Transform:
   m_PrefabParentObject: {fileID: 490482, guid: 21c2d46e49626a545b3478dd6f7a6330, type: 2}
