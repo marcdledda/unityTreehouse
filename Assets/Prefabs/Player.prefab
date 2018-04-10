@@ -837,6 +837,8 @@ GameObject:
   - component: {fileID: 9511024}
   - component: {fileID: 5453052}
   - component: {fileID: 6514102}
+  - component: {fileID: 114578419486329190}
+  - component: {fileID: 114337293844128286}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3042,3 +3044,27 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 147378}
   m_IsPrefabParent: 1
+--- !u!114 &114337293844128286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60be043d6afa1d47b148e9dea4d7dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alive: 0
+  pickupPrefab: {fileID: 152702, guid: b7d765d34fbbcf64b96e65a02caa0952, type: 2}
+--- !u!114 &114578419486329190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd9023afe3ca3a44ba15bef7c5a55e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
