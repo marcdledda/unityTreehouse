@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 435966}
   - component: {fileID: 19818124}
   - component: {fileID: 19911908}
+  - component: {fileID: 114240681004569648}
   m_Layer: 0
   m_Name: PlayerParticles
   m_TagString: Untagged
@@ -270,7 +271,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -311,7 +312,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -3438,3 +3439,14 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 152702}
   m_IsPrefabParent: 1
+--- !u!114 &114240681004569648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f19591bf5820f48938a20a655b412f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
