@@ -12,6 +12,8 @@ public class FlyPickup : MonoBehaviour {
 		if (other.CompareTag("Player")) {
 			//...add pickup particles...
 			Instantiate(pickupPrefab, transform.position, Quaternion.identity);
+			//...decrement the total number of flies...
+			FlySpawner.totalFlies--;
 			Destroy(gameObject);
 		}
 	}
